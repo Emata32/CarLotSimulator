@@ -22,14 +22,19 @@ namespace CarLotSimulator
             //*************BONUS*************//
 
             // Set the properties utilizing the 3 different ways we learned about, one way for each car
+
+            Console.WriteLine($"Car created: {CarLot._numberOfCars}\n");
+            
             var carOne = new Car();
             carOne.Make = "Chevy";
             carOne.Model = "Silverado";
             carOne.Year = 2005;
             carOne.IsDriveable = true;
-            
             carOne.MakeEngineNoise("Good");
             carOne.MakeHonkNoise("Weak");
+            
+            Console.WriteLine($"Car created: {CarLot._numberOfCars}\n");
+
             
             carLotOne.ParkingLot.Add(carOne);
 
@@ -42,12 +47,15 @@ namespace CarLotSimulator
             };
             carTwo.MakeEngineNoise("MissFire");
             carTwo.MakeHonkNoise("Good");
-           
             carLotOne.ParkingLot.Add(carTwo);
+            Console.WriteLine($"Car created: {CarLot._numberOfCars}\n");
             
             var carThree = new Car("Ford", "Mustang", 1964 ,true);
             carThree.MakeEngineNoise("Good");
             carThree.MakeHonkNoise("Good");
+            
+            Console.WriteLine($"Car created: {CarLot._numberOfCars}\n");
+
            
             carLotOne.ParkingLot.Add(carThree);
 
@@ -59,6 +67,8 @@ namespace CarLotSimulator
             //It should have at least one property: a List of cars
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
+            Console.WriteLine("List of parking lot items:");
+            
             carLotOne.CheckCars();
         }
     }

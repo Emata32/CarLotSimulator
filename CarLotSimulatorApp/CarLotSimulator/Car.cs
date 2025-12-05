@@ -31,7 +31,7 @@ public class Car
 
     public Car()
     {
-        
+        CarLot._numberOfCars++;
     }
 
     public Car(string make, string model, int year, bool isDriveable)
@@ -40,6 +40,7 @@ public class Car
         Model = model;
         Year = year;
         IsDriveable = isDriveable;
+        CarLot._numberOfCars++;
         
         
     }
